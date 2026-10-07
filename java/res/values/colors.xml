@@ -21,10 +21,12 @@
     <color name="chooser_row_divider">@*android:color/list_divider_color_light</color>
     <color name="chooser_gradient_background">@*android:color/loading_gradient_background_color_light</color>
 
-    <color name="chooser_action_button_bg_color">@color/materialColorSurfaceContainerHigh</color>
+    <!-- Cyclon (design draft 4): the sheet is raised (below), so chips and previews on it take the cell colour to keep
+         their shape. -->
+    <color name="chooser_action_button_bg_color">@color/materialColorSurfaceContainerHighest</color>
     <color name="chooser_action_button_drawable_tint_color">@color/materialColorOnSurface</color>
     <color name="chooser_action_button_text_color">@color/materialColorOnSurface</color>
-    <color name="chooser_content_preview_rounded_color">@color/materialColorSurfaceContainerHigh</color>
+    <color name="chooser_content_preview_rounded_color">@color/materialColorSurfaceContainerHighest</color>
     <color name="chooser_grid_layout_background">@color/materialColorSurfaceContainer</color>
     <color name="chooser_grid_preview_background">@color/materialColorSurfaceContainer</color>
     <color name="chooser_grid_item_text1_color">@color/materialColorOnSurface</color>
@@ -36,4 +38,10 @@
     <color name="chooser_row_text_color">@color/materialColorOnSurfaceVariant</color>
     <color name="icon_tint_color">@color/materialColorOnSurface</color>
     <color name="resolver_common_window_background_color">@android:color/transparent</color>
+
+    <!-- Cyclon (design draft 4): sheets draw on the raised surface. The share sheet and resolver are drawn in
+         surface_container, which Cyclon pins to the page colour, so in dark they were black on the black app below.
+         This overrides dynamiccolors' role inside IntentResolver only: surface_container_high is Raised
+         (#F2F2F1 / #121214). -->
+    <color name="materialColorSurfaceContainer">@android:color/system_surface_container_high_light</color>
 </resources>
